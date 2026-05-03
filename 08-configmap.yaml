@@ -6,4 +6,5 @@ data:
   # property-like keys; each key maps to a simple value
   project: "roboshop"
   env: "dev"
+  trainer: "siva"
   
