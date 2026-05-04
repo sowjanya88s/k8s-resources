@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    project: roboshop
+    env: dev
+    component: frontend 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      project: roboshop
+      env: dev
+      component: frontend 
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        env: dev
+        component: frontend 
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        
