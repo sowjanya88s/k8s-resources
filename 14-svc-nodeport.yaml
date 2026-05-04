@@ -9,6 +9,6 @@ spec:
     env: dev
     component: frontend
   ports:
-    - port: 80
-      targetPort: 80
-      nodePort: 30873
+  - port: 80
+    targetPort: 80
+    nodePort: 30873
