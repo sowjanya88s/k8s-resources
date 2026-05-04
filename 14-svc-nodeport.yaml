@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodePort-nginx
+spec:
+  type: NodePort
+  selector:
+    project: roboshop
+    env: dev
+    component: frontend
+  ports:
+    - port: 80
+      targetPort: 80
+      #nodePort: 30007
