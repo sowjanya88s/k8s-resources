@@ -1,0 +1,8 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: roboshop-ebs
+provisioner: ebs.csi.aws.com # Specifies the EBS CSI driver
+volumeBindingMode: WaitForFirstConsumer # Ensures volume is in the same AZ as the Pod
+reclaimPolicy: Retain # Deletes EBS volume when PVC is deleted
+
