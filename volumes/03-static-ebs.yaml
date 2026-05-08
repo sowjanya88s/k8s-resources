@@ -40,5 +40,5 @@ spec:
       topology.kubernetes.io/zone: us-east-1a
   volumes:
   - name: nginx-data
-    PersistentVolumeClaim:
+    persistentVolumeClaim:
      claimName: ebs-static
